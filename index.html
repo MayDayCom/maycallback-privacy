@@ -25,7 +25,7 @@
     -webkit-font-smoothing:antialiased;
   }
   .wrap{max-width:760px;margin:0 auto}
-  header{
+  .privacy-hero{
     text-align:center;
     padding:56px 0 40px;
     border-bottom:1px solid var(--line);
@@ -93,17 +93,29 @@
     .card{padding:20px 18px}
     th{width:44%}
   }
+
+  .site-top{position:sticky;top:0;z-index:20;border-bottom:1px solid #34435b;background:rgba(16,24,39,.96);backdrop-filter:blur(14px)}
+  .site-top-inner{max-width:1100px;margin:auto;padding:13px 20px;display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
+  .site-brand{display:flex;align-items:center;gap:10px;color:#f3f7ff;font-weight:800;font-size:16px}
+  .site-brand img{width:36px;height:36px;border-radius:9px;object-fit:cover}
+  .site-nav{display:flex;gap:8px;align-items:center}
+  .site-nav a{padding:8px 11px;border:1px solid #34435b;border-radius:10px;color:#c5d4ee;font-size:13px;text-decoration:none;font-weight:700;white-space:nowrap}
+  .site-nav a.active{background:#29466f;color:white;border-color:#4f8cff}
+  .site-nav a:hover{border-color:#7ea7ff}
+  .privacy-hero{padding:38px 0 35px;margin-bottom:36px}
+  @media(max-width:560px){.site-top-inner{padding:11px 14px}.site-nav a{font-size:12px;padding:7px 9px}.site-brand{font-size:14px}.privacy-hero{padding-top:32px}}
 </style>
 </head>
 <body>
+<div class="site-top"><div class="site-top-inner"><div class="site-brand"><img src="icon.png" alt="">메이콜백</div><nav class="site-nav" aria-label="사이트 메뉴"><a class="active" href="index.html" aria-current="page">개인정보처리방침</a><a href="help.html">사용 설명서</a></nav></div></div>
 <div class="wrap">
 
-<header>
+<section class="privacy-hero">
   <img class="logo" src="icon.png" alt="메이콜백 앱 아이콘" width="88" height="88">
   <h1>메이콜백 개인정보처리방침</h1>
   <p class="sub">MayCallBack · 메이데이컴퓨터</p>
   <span class="badge">개인정보 처리방침</span>
-</header>
+</section>
 
 <section class="card">
   <h2>1. 앱이 하는 일</h2>
@@ -194,11 +206,6 @@
   </ul>
 </section>
 
-<section class="card" aria-label="앱 사용 설명서">
-  <h2>메이콜백 사용 설명서</h2>
-  <p>앱 화면별 사용 방법과 설정 안내를 확인할 수 있습니다.</p>
-  <p><a href="help.html" style="display:inline-block;background:#4F8CFF;color:#fff;padding:10px 17px;border-radius:10px;text-decoration:none;font-weight:700">사용 설명서 열기 →</a></p>
-</section>
 
 <footer>
   <p><strong>MayCallBack</strong> · 메이데이컴퓨터 (Mayday Computer)</p>
