@@ -21,10 +21,10 @@
     color:#E8EDF5;
     font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Apple SD Gothic Neo","Malgun Gothic","맑은 고딕",Roboto,sans-serif;
     line-height:1.75;
-    padding:0 20px 80px;
+    padding:0;
     -webkit-font-smoothing:antialiased;
   }
-  .wrap{max-width:760px;margin:0 auto}
+  .wrap{max-width:760px;margin:0 auto;padding:0 20px 80px}
   .privacy-hero{
     text-align:center;
     padding:56px 0 40px;
@@ -94,27 +94,29 @@
     th{width:44%}
   }
 
-  .site-top{position:sticky;top:0;z-index:20;border-bottom:1px solid #34435b;background:rgba(16,24,39,.96);backdrop-filter:blur(14px)}
-  .site-top-inner{max-width:1100px;margin:auto;padding:13px 20px;display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
-  .site-brand{display:flex;align-items:center;gap:10px;color:#f3f7ff;font-weight:800;font-size:16px}
-  .site-brand img{width:36px;height:36px;border-radius:9px;object-fit:cover}
-  .site-nav{display:flex;gap:8px;align-items:center}
-  .site-nav a{padding:8px 11px;border:1px solid #34435b;border-radius:10px;color:#c5d4ee;font-size:13px;text-decoration:none;font-weight:700;white-space:nowrap}
-  .site-nav a.active{background:#29466f;color:white;border-color:#4f8cff}
-  .site-nav a:hover{border-color:#7ea7ff}
-  .privacy-hero{padding:38px 0 35px;margin-bottom:36px}
-  @media(max-width:560px){.site-top-inner{padding:11px 14px}.site-nav a{font-size:12px;padding:7px 9px}.site-brand{font-size:14px}.privacy-hero{padding-top:32px}}
+
+  /* 도움말 페이지와 동일한 상단 구조 */
+  .top{border-bottom:1px solid #34435b;padding:13px 20px;background:#101827;position:sticky;top:0;z-index:20}
+  .topinner{max-width:1100px;margin:auto;display:flex;align-items:center;justify-content:space-between;gap:8px}
+  .top .logo{display:flex;align-items:center;gap:10px;font-weight:800;width:auto;height:auto;margin:0;border-radius:0;box-shadow:none;color:#f3f7ff;text-align:left}
+  .top .logo img{width:36px;height:36px;border-radius:9px;object-fit:cover;display:block}
+  .top a{font-size:12px;color:#a8caff;text-decoration:none}
+  .top a:hover{text-decoration:underline}
+  .privacy-hero{text-align:left;padding:38px 0 24px;border:0;margin:0}
+  .privacy-hero .eyebrow{color:#82b2ff;font-weight:bold;font-size:12px;letter-spacing:.15em}
+  .privacy-hero h1{font-size:clamp(27px,5vw,40px);line-height:1.25;margin:8px 0 10px}
+  .privacy-hero p{color:#9AAAC0;font-size:14px;margin:0}
+  @media(max-width:560px){.top{padding:12px 15px}.top .logo{font-size:14px}.top .logo img{width:32px;height:32px}}
 </style>
 </head>
 <body>
-<div class="site-top"><div class="site-top-inner"><div class="site-brand"><img src="icon.png" alt="">메이콜백</div><nav class="site-nav" aria-label="사이트 메뉴"><a class="active" href="index.html" aria-current="page">개인정보처리방침</a><a href="help.html">사용 설명서</a></nav></div></div>
+<header class="top"><div class="topinner"><div class="logo"><img src="icon.png" alt="">메이콜백 개인정보처리방침</div><a href="help.html">사용 설명서</a></div></header>
 <div class="wrap">
 
 <section class="privacy-hero">
-  <img class="logo" src="icon.png" alt="메이콜백 앱 아이콘" width="88" height="88">
+  <div class="eyebrow">MAYCALLBACK · PRIVACY POLICY</div>
   <h1>메이콜백 개인정보처리방침</h1>
-  <p class="sub">MayCallBack · 메이데이컴퓨터</p>
-  <span class="badge">개인정보 처리방침</span>
+  <p>메이콜백 · 메이데이컴퓨터</p>
 </section>
 
 <section class="card">
